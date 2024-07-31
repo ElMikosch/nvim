@@ -187,6 +187,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+--Custom Keybinds
+vim.keymap.set('n', '<leader>oo', ':set conceallevel=2<CR>:cd ~/vaults/notes<CR>:e Source.md<CR>', { desc = '[O]pen [N]otes' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -655,6 +658,21 @@ require('lazy').setup({
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
+        css = { 'prettier' },
+        graphql = { 'prettier' },
+        handlebars = { 'prettier' },
+        html = { 'prettier' },
+        javascript = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        json = { 'prettier' },
+        jsonc = { 'prettier' },
+        less = { 'prettier' },
+        markdown = { 'prettier' },
+        scss = { 'prettier' },
+        typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        vue = { 'prettier' },
+        yaml = { 'prettier' },
       },
     },
   },
@@ -771,6 +789,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'nvim_lsp_signature_help' },
         },
       }
     end,
